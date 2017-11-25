@@ -1,0 +1,63 @@
+//variables
+$darkred:#981118;
+// Bootstrap scss
+@import "others/bootstrap/bootstrap";
+// media queries scss
+@import "others/media_queries";
+// button scss
+@import "others/buttons";
+//form-elements
+@import "others/form-elements";
+
+/* Common */
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.footer {
+  width: 100%;
+  height: 40px;
+  background: #232526;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #414345, #232526);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #414345, #232526);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  p {
+    margin: 10px 0;
+    color: #fff;
+    font-weight: bold;
+  }
+}
+
+.main_container {
+  min-height: 100vh;
+  background-color: #52d3aa;
+  background-image: -webkit-gradient(linear, 0% 0%, 100% 100%, color-stop(0, #3f95ea), color-stop(1, #52d3aa));
+  background-image: -webkit-repeating-linear-gradient(top left, #3f95ea 0%, #52d3aa 100%);
+  background-image: repeating-linear-gradient(to bottom right, #3f95ea 0%, #52d3aa 100%);
+  background-image: -ms-repeating-linear-gradient(top left, #3f95ea 0%, #52d3aa 100%);
+  .mid-block {
+    padding-top: 50px;
+    .navbar {
+      border: 0;
+    }
+  }
+}
+
+h1,
+h2 {
+  margin-top: 10px;
+  font-size: 38px;
+  font-weight: 100;
+  color: #555;
+  line-height: 50px;
+}
+
+h3 {
+  font-size: 22px;
+  font-weight: 300;
+  color: #555;
+  line-height: 30px;
+}
