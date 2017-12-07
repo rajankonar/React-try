@@ -6041,6 +6041,17 @@ button.close {
     margin-top: 170px;
     border-right: 1px solid #fff;
     border-right: 1px solid rgba(255, 255, 255, 0.6); }
+  .login-block .form-gender + h4, .login-block .form-group label,
+  .signup-block .form-gender + h4,
+  .signup-block .form-group label {
+    font-size: 20px;
+    margin: 0px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    color: #fff; }
+  .login-block .form-group .radio-inline,
+  .signup-block .form-group .radio-inline {
+    margin-right: 20px; }
 
 /* Common */
 body {
@@ -6069,7 +6080,7 @@ body {
   background-image: -webkit-repeating-linear-gradient(top left, #3f95ea 0%, #52d3aa 100%);
   background-image: repeating-linear-gradient(to bottom right, #3f95ea 0%, #52d3aa 100%); }
   .main_container .mid-block {
-    padding-top: 50px; }
+    padding: 50px 0; }
     .main_container .mid-block .navbar {
       border: 0; }
 

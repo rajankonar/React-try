@@ -30,29 +30,6 @@ class Login extends Component{
     });
   }
   
-/*  handleClick(event) {
-    event.preventDefault();
-    console.log(this.state);
-  var apiBaseUrl = "http://dev-dm8.pantheonsite.io/";
-  var payload = {
-    'name' : this.state.username,
-    'pass' : this.state.password
-  }
-    
-  axios.post(apiBaseUrl+'user/login?_format=json', payload, {
-    headers: {
-      'Content-Type': 'application/json',
-    },
-  })  
-  .then(function (response) {
-    console.log(response);
-  })
-  .catch(function (error) {
-    alert(error);
-  });    
-    
-    
-}*/
   
   render(){
     return (

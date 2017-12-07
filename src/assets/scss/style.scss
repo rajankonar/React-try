@@ -25,13 +25,13 @@ body {
   background: linear-gradient(to right, #414345, #232526);
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   p {
-    margin: 10px 0;
+    margin: 10px 0; 
     color: #fff;
     font-weight: bold;
   }
 }
 
-.main_container {
+.main_container { 
   min-height: 100vh;
   background-color: #52d3aa;
   background-image: -webkit-gradient(linear, 0% 0%, 100% 100%, color-stop(0, #3f95ea), color-stop(1, #52d3aa));
@@ -39,7 +39,7 @@ body {
   background-image: repeating-linear-gradient(to bottom right, #3f95ea 0%, #52d3aa 100%);
   background-image: -ms-repeating-linear-gradient(top left, #3f95ea 0%, #52d3aa 100%);
   .mid-block {
-    padding-top: 50px;
+    padding: 50px 0;
     .navbar {
       border: 0;
     }

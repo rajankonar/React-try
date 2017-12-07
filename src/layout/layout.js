@@ -1,11 +1,13 @@
 import React,{ Component } from 'react';
 import { BrowserRouter as Router, Switch, Route  } from 'react-router-dom';
 import {withRouter} from "react-router-dom";
+
 import Login from './../pages/login';
 import Welcome from './../pages/welcome';
 import Home from './../pages/home';
 import Signup from './../pages/signup';
 import Logout from './../pages/logout';
+import Profile from './../pages/profile';
 
 import Topnav from './../components/topnav';
 
@@ -51,6 +53,7 @@ class Layout extends Component{
               <Route path='/login' component={Login} />
               <Route path='/signup' component={Signup} />
               <Route path='/logout' component={Logout}  />
+              <Route path='/profile' component={Profile}  />
             </Switch>
           </div>
         </div>

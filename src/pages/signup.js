@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 
+
 class Signup extends Component{
   render(){
     return (
@@ -30,9 +31,21 @@ class Signup extends Component{
                           <input type="text" name="form-email" placeholder="Email..." className="form-email form-control" id="form-email" />
                       </div>
                       <div className="form-group">
-                          <label className="sr-only" htmlFor="form-about-yourself">About yourself</label>
-                          <textarea name="form-about-yourself" placeholder="About yourself..." 
-                                      className="form-about-yourself form-control" id="form-about-yourself"></textarea>
+                          <label className="radio-inline">
+                            <input type="radio"  className="form-gender " name="gender"/><h4>Male</h4>
+                          </label>
+                          <label className="radio-inline">
+                            <input type="radio"  className="form-gender " name="gender"/><h4>Female</h4>
+                          </label>
+                      </div>
+                      <div className="form-group">
+                        <label htmlFor="lead">Select Lead</label>
+                        <select className="form-control" id="lead">
+                          <option>1</option>
+                          <option>2</option>
+                          <option>3</option>
+                          <option>4</option>
+                        </select>
                       </div>
                       <button type="submit" className="btn">Sign me up!</button>
                   </form>
