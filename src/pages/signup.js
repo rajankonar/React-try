@@ -4,7 +4,7 @@ class Signup extends Component{
   render(){
     return (
       <div className="signup-block">
-       <div className="col-sm-4 col-md-push-4">
+       <div className="col-sm-6 col-md-push-3">
           <div className="form-box">
               <div className="form-top">
                   <div className="form-top-left">

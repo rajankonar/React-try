@@ -1,6 +1,59 @@
 import React, { Component } from 'react';
+import authentication from './../services/authentication';
+import {withRouter} from "react-router-dom";
+
 
 class Login extends Component{
+  constructor(props){
+    super(props);
+    this.state={
+      username:'',
+      password:''
+    }
+  }
+  setValuesStates(event){
+     this.setState({  [event.target.name]  : event.target.value } );
+  }
+  
+  onSubmitLogin(event) {
+    event.preventDefault();
+
+    const user = this.state.username;
+    const pass = this.state.password;
+    //var loggedIn = true;
+    authentication.login(user, pass, (loggedIn)=> {
+      console.log(loggedIn);
+      if (loggedIn)
+        this.props.history.push({pathname: '/welcome'});
+      else
+        return this.setState({ error: true });
+    });
+  }
+  
+/*  handleClick(event) {
+    event.preventDefault();
+    console.log(this.state);
+  var apiBaseUrl = "http://dev-dm8.pantheonsite.io/";
+  var payload = {
+    'name' : this.state.username,
+    'pass' : this.state.password
+  }
+    
+  axios.post(apiBaseUrl+'user/login?_format=json', payload, {
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  })  
+  .then(function (response) {
+    console.log(response);
+  })
+  .catch(function (error) {
+    alert(error);
+  });    
+    
+    
+}*/
+  
   render(){
     return (
       <div className="login-block">
@@ -16,16 +69,16 @@ class Login extends Component{
                 </div>
             </div>
             <div className="form-bottom">
-                <form role="form" action="" method="post" className="login-form">
+                <form action="post" className="login-form">
                     <div className="form-group">
                         <label className="sr-only" htmlFor="form-username">Username</label>
-                        <input type="text" name="form-username" placeholder="Username..." className="form-username form-control" id="form-username" />
+                        <input type="text" name="username" placeholder="Username..." className="form-username form-control" id="form-username" onChange ={(event) => this.setValuesStates(event)} />
                     </div>
                     <div className="form-group">
                         <label className="sr-only" htmlFor="form-password">Password</label>
-                        <input type="password" name="form-password" placeholder="Password..." className="form-password form-control" id="form-password" />
+                        <input type="password" name="password" placeholder="Password..." className="form-password form-control" id="form-password" onChange ={(event) => this.setValuesStates(event)}/>
                     </div>
-                    <button type="submit" className="btn">Sign in!</button>
+                    <button type="submit" className="btn" onClick={(event) => this.onSubmitLogin(event)}>Sign in!</button>
                 </form>
             </div>
           </div>
